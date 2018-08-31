@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour {
-    public AudioClip[] clips;
+    private AudioClip[] clips;
     private AudioSource audioSource;
-    public AudioMixer audioMixer;
     void Start()
     {
+        clips = Resources.LoadAll<AudioClip>("Audio/Music");
         audioSource = FindObjectOfType<AudioSource>();
+        AudioMixer audioMixer = Resources.Load<AudioMixer>("Audio/MasterMixer");
         audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Music")[0];
         audioSource.loop = false;
     }
