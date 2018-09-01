@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadInfomation : MonoBehaviour {
+public class LoadInfomation {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public static void LoadAllInfomation()
+    {
+        GameInfomation.Playername = PlayerPrefs.GetString("PLAYERNAME");
+        GameInfomation.Playerage = PlayerPrefs.GetInt("PLAYERAGE");
+    }
 }

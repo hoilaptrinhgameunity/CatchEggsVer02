@@ -9,10 +9,39 @@ public class Panel_Manager : MonoBehaviour {
     public GameObject PopUp_TroChoiMoi_Panel;
     public GameObject Input_NewGame_Panel;
 
+    private void Awake()
+    {
+        LoadInfomation.LoadAllInfomation();
+        if (GameInfomation.Playername == "" && GameInfomation.Playerage == 0)
+        {
+            GameObject bt = GameObject.Find("btn_TiepTuc");
+            if(bt.activeSelf)
+            bt.SetActive(false);
+        }
+        
+    }
+    public void btn_Cuahang()
+    {
+        LoadInfomation.LoadAllInfomation();
+        Debug.Log(GameInfomation.Playername);
+        Debug.Log(GameInfomation.Playerage);
+    }
+
     public void btn_tieptuc()
     {
         scenesManager scm = new scenesManager();
         scm.scenesLoad(1);
+    }
+    public void btn_TroChoiMoi()
+    {
+        if (GameInfomation.Playername == "" && GameInfomation.Playerage == 0)
+        {
+            Input_NewGame_Panel.SetActive(true);
+        }
+        else
+        {
+            open_PopUp_TroChoiMoi_Panel();
+        }
     }
     public void btn_CauHinh()
     {
@@ -54,8 +83,10 @@ public class Panel_Manager : MonoBehaviour {
     }
     public void OK_PopUp_TroChoiMoi_Panel()
     {
-        Debug.Log("Da reset data, ban hay choi lai tu dau");
+        PlayerPrefs.DeleteKey("PLAYERNAME");
+        PlayerPrefs.DeleteKey("PLAYERAGE");
         PopUp_TroChoiMoi_Panel.SetActive(false);
         Input_NewGame_Panel.SetActive(true);
     }
+
 }

@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaveInfomation : MonoBehaviour {
+public class SaveInfomation {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public static void SaveAllInfomation()
+    {
+        PlayerPrefs.SetString("PLAYERNAME", GameInfomation.Playername);
+        PlayerPrefs.SetInt("PLAYERAGE", GameInfomation.Playerage);
+    }
 }

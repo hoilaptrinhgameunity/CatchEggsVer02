@@ -45,6 +45,9 @@ public class Input_NewGame_Panel : MonoBehaviour {
     {
         if(inputName.text != "" && inputAge.text != "")
         {
+            GameInfomation.Playername = inputName.text;
+            GameInfomation.Playerage = int.Parse(inputAge.text);
+            SaveInfomation.SaveAllInfomation();
             scenesManager scm = new scenesManager();
             scm.scenesLoad(1);
         }

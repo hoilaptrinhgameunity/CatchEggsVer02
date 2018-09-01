@@ -7,15 +7,9 @@ public class SoundManager : MonoBehaviour {
     private AudioClip[] clips;
     private AudioSource audioSource;
 
-    private static bool created = false;
-
     void Awake()
     {
-        if (!created)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            created = true;
-        }
+        DontDestroyOnLoad(transform.gameObject);
     }
     void Start()
     {

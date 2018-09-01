@@ -1561,6 +1561,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fe671e68d2d3e04f9ec96c6201e4343, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &873819463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 873819464}
+  - component: {fileID: 873819465}
+  m_Layer: 0
+  m_Name: GameInfomation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873819464
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 873819463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 462.04492, y: 181.75294, z: 1784.478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873819465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 873819463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249a028c27783634bb2e3b2aeec13daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975446705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +2016,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224268228485880744, guid: b0fa26d68774e054e9cda0ce109649a9,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -2177,6 +2222,31 @@ Prefab:
       value: btn_tieptuc
       objectReference: {fileID: 0}
     - target: {fileID: 114729426279840954, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 283032311}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: btn_Cuahang
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352966292010976, guid: b0fa26d68774e054e9cda0ce109649a9,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
