@@ -34,6 +34,7 @@ public class Panel_Manager : MonoBehaviour {
     }
     public void btn_TroChoiMoi()
     {
+        LoadInfomation.LoadAllInfomation();
         if (GameInfomation.Playername == "" && GameInfomation.Playerage == 0)
         {
             Input_NewGame_Panel.SetActive(true);
