@@ -14,9 +14,9 @@ public class Panel_Manager : MonoBehaviour {
         LoadInfomation.LoadAllInfomation();
         if (GameInfomation.Playername == "" && GameInfomation.Playerage == 0)
         {
-            GameObject bt = GameObject.Find("btn_TiepTuc");
-            if(bt.activeSelf)
-            bt.SetActive(false);
+            GameObject btnTiepTuc = GameObject.Find("btn_TiepTuc");
+            if(btnTiepTuc.activeSelf)
+                btnTiepTuc.SetActive(false);
         }
         
     }
@@ -84,8 +84,6 @@ public class Panel_Manager : MonoBehaviour {
     }
     public void OK_PopUp_TroChoiMoi_Panel()
     {
-        PlayerPrefs.DeleteKey("PLAYERNAME");
-        PlayerPrefs.DeleteKey("PLAYERAGE");
         PopUp_TroChoiMoi_Panel.SetActive(false);
         Input_NewGame_Panel.SetActive(true);
     }

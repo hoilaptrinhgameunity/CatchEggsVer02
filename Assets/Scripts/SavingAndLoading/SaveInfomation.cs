@@ -6,7 +6,7 @@ public class SaveInfomation {
 
 	public static void SaveAllInfomation()
     {
-        PlayerPrefs.SetString("PLAYERNAME", GameInfomation.Playername);
-        PlayerPrefs.SetInt("PLAYERAGE", GameInfomation.Playerage);
+        PlayerPrefs.SetString("CATCHEGGS_PLAYERNAME", GameInfomation.Playername);
+        PlayerPrefs.SetInt("CATCHEGGS_PLAYERAGE", GameInfomation.Playerage);
     }
 }

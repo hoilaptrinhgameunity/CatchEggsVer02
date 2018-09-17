@@ -6,7 +6,7 @@ public class LoadInfomation {
 
     public static void LoadAllInfomation()
     {
-        GameInfomation.Playername = PlayerPrefs.GetString("PLAYERNAME");
-        GameInfomation.Playerage = PlayerPrefs.GetInt("PLAYERAGE");
+        GameInfomation.Playername = PlayerPrefs.GetString("CATCHEGGS_PLAYERNAME");
+        GameInfomation.Playerage = PlayerPrefs.GetInt("CATCHEGGS_PLAYERAGE");
     }
 }
