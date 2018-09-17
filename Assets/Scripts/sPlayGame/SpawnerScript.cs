@@ -13,9 +13,9 @@ public class SpawnerScript : MonoBehaviour {
     }
     void Update()
     {
-        if (GameInfomation.catchStatus == (int)GameInfomation.statusGame.batdau)
-        {            
-            spawnCath();
+        if (GameInfomation.catchStatus == 3)
+        {
+            spawnCath();         
         }
     }
     void spawnCath()
@@ -42,8 +42,7 @@ public class SpawnerScript : MonoBehaviour {
         Instantiate(spawnerObj[catchRandom[instanRandom[0]]], spawnPos1, spawnerObj[catchRandom[instanRandom[0]]].transform.rotation);
         Instantiate(spawnerObj[catchRandom[instanRandom[1]]], spawnPos2, spawnerObj[catchRandom[instanRandom[1]]].transform.rotation);
         Instantiate(spawnerObj[catchRandom[instanRandom[2]]], spawnPos3, spawnerObj[catchRandom[instanRandom[2]]].transform.rotation);
-        GameInfomation.catchStatus = (int)GameInfomation.statusGame.tamdung;
-        //Debug.Log(GameInfomation.Spawner);
+        GameInfomation.catchStatus = 0;
     }
     int[] funCatchRandom()
     {

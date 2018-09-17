@@ -20,11 +20,13 @@ public class BucketCollisder : MonoBehaviour {
         {
             Debug.Log("Chuc mung: Diem + 1");
             Destroy(other.gameObject);
+            GameInfomation.catchStatus++;
         }
         else
         {
             Debug.Log("Chia buon: Diem - 1");
             Destroy(other.gameObject);
+            GameInfomation.catchStatus++;
         }
     }
 }

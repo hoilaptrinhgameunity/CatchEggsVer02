@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameInfomation : MonoBehaviour {
-    public static int gameStatus;
-    public static int catchStatus;
+    public static int gameStatus = (int)statusGame.batdau;
+    public static int catchStatus = 3;
     public static string Playername { get; set; }
     public static int Playerage { get; set; }
 
@@ -19,11 +19,5 @@ public class GameInfomation : MonoBehaviour {
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
-    }
-
-    void Start()
-    {
-        gameStatus = (int)statusGame.batdau;
-        catchStatus = (int)statusGame.batdau;
-    }
+    } 
 }

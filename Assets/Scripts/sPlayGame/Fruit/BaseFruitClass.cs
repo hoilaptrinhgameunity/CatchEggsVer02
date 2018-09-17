@@ -32,7 +32,7 @@ public class BaseFruitClass : MonoBehaviour {
         {
             //Destroy this gameobject (and all attached components)
             Destroy(this.gameObject);
-            GameInfomation.catchStatus = (int)GameInfomation.statusGame.batdau;
+            GameInfomation.catchStatus++;
             /*if (transform.gameObject.name == "Egg")
             {
                 GameMNG.health -= 1f;
@@ -41,8 +41,8 @@ public class BaseFruitClass : MonoBehaviour {
     }
     public void Tieuhuy()
     {
+        GameInfomation.catchStatus++;
         Destroy(this.gameObject);
-        GameInfomation.catchStatus = (int)GameInfomation.statusGame.batdau;
     }
     IEnumerator soundLoad()
     {
