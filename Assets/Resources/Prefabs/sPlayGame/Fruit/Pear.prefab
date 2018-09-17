@@ -37,10 +37,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4430738317935622}
   - component: {fileID: 205322887838033652}
-  - component: {fileID: 114145879282178562}
-  - component: {fileID: 82249187083831152}
   - component: {fileID: 54859950565096442}
   - component: {fileID: 65787000907282612}
+  - component: {fileID: 114145879282178562}
+  - component: {fileID: 82249187083831152}
   m_Layer: 0
   m_Name: Pear
   m_TagString: Untagged

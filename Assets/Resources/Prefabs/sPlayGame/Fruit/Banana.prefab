@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4508261315457008}
   - component: {fileID: 205670375614511328}
-  - component: {fileID: 114074673250375256}
   - component: {fileID: 54993072969474286}
-  - component: {fileID: 82160532147803050}
   - component: {fileID: 65314809437068860}
+  - component: {fileID: 114074673250375256}
+  - component: {fileID: 82160532147803050}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Untagged
