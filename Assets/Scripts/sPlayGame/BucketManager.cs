@@ -6,12 +6,7 @@ public class BucketManager : MonoBehaviour {
 	
     // Use this for initialization
     public float speed;
-
-    private Rigidbody rb;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    
     void FixedUpdate()
     {
         float moveInput = 0;

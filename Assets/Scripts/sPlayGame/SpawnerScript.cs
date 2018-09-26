@@ -17,12 +17,13 @@ public class SpawnerScript : MonoBehaviour {
         {
             spawnCath();         
         }
+        System.Random a = new System.Random();
     }
     void spawnCath()
     {
         int[] catchRandom = funCatchRandom();
-        GameInfomation.Spawner = spawnerObj[catchRandom[0]].GetComponent<BaseFruitClass>().fruitClassName;
-        
+        int randomcatch = Random.Range(0,3);
+        GameInfomation.Spawner = spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName;
         Vector3 spawnPos1 = transform.position + new Vector3(-1.6f, 0, 0);
         Vector3 spawnPos2 = transform.position + new Vector3(0, 0, 0);
         Vector3 spawnPos3 = transform.position + new Vector3(1.6f, 0, 0);
