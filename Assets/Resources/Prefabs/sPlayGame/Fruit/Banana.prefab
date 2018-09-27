@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4508261315457008}
-  - component: {fileID: 205670375614511328}
   - component: {fileID: 54993072969474286}
   - component: {fileID: 65314809437068860}
   - component: {fileID: 114074673250375256}
@@ -85,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1315711946183344}
   m_LocalRotation: {x: 0.35355335, y: -0.61237246, z: -0.35355335, w: 0.61237246}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.36, y: 0.111, z: -1.823}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4151318054832914}
@@ -213,8 +212,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: 0.07, z: 0}
+  m_Size: {x: 0.2, y: 0.05512637, z: 0.11277866}
+  m_Center: {x: 0.000000011747632, y: 0.01373467, z: 0.006389332}
 --- !u!82 &82160532147803050
 AudioSource:
   m_ObjectHideFlags: 1
@@ -225,7 +224,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243967311130692838, guid: 0f0c4ad408b77ab4d95feca57144487f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: f5a64221f98cac9459dfeac53a8bf469, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed73e5206e8ad484a9de8f8d2f1bc923, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -309,24 +308,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitClassName: Banana
   fruitClassDescription: "Tr\xE1i Chu\u1ED1i"
---- !u!205 &205670375614511328
-LODGroup:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315711946183344}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.00013412908, y: 0.017862778, z: 0.019280627}
-  m_Size: 0.1684247
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LODs:
-  - screenRelativeHeight: 0.25
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23972579791472652}
-  - screenRelativeHeight: 0.01
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 23522047855429942}
-  m_Enabled: 1

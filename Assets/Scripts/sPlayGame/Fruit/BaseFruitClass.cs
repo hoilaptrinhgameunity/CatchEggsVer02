@@ -17,6 +17,7 @@ public class BaseFruitClass : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        transform.Rotate(new Vector3(-15, 2, 2) * Time.deltaTime);
         float fallSpeed = Time.deltaTime;
         if (GameInfomation.gameStatus == (int)GameInfomation.statusGame.batdau)
         {
@@ -31,8 +32,8 @@ public class BaseFruitClass : MonoBehaviour {
         if (transform.position.y < -1 || transform.position.y >= 20)
         {
             //Destroy this gameobject (and all attached components)
-            Destroy(this.gameObject);
             GameInfomation.catchStatus++;
+            Destroy(this.gameObject);
             /*if (transform.gameObject.name == "Egg")
             {
                 GameMNG.health -= 1f;
@@ -43,6 +44,7 @@ public class BaseFruitClass : MonoBehaviour {
     {
         GameInfomation.catchStatus++;
         Destroy(this.gameObject);
+        
     }
     IEnumerator soundLoad()
     {
