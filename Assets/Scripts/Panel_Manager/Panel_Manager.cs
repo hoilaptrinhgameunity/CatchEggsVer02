@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Panel_Manager : MonoBehaviour {
     
@@ -8,7 +9,7 @@ public class Panel_Manager : MonoBehaviour {
     public GameObject Config_Panel;
     public GameObject PopUp_TroChoiMoi_Panel;
     public GameObject Input_NewGame_Panel;
-
+    public GameObject Select_Panel;
     private void Awake()
     {
         LoadInfomation.LoadAllInfomation();
@@ -29,8 +30,8 @@ public class Panel_Manager : MonoBehaviour {
 
     public void btn_tieptuc()
     {
-        scenesManager scm = new scenesManager();
-        scm.scenesLoad(1);
+        Main_Panel.SetActive(false);
+        Select_Panel.SetActive(true);
     }
     public void btn_TroChoiMoi()
     {
@@ -87,5 +88,23 @@ public class Panel_Manager : MonoBehaviour {
         PopUp_TroChoiMoi_Panel.SetActive(false);
         Input_NewGame_Panel.SetActive(true);
     }
-
+    public void bt_Numbers()
+    {
+        GameInfomation.scenePlay = "bt_Numbers";
+        loadScene(1);
+    }
+    public void bt_Alphabet()
+    {
+        GameInfomation.scenePlay = "bt_Alphabet";
+        loadScene(1);
+    }
+    public void bt_Fruit()
+    {
+        GameInfomation.scenePlay = "bt_Fruit";
+        loadScene(1);
+    }
+    public void loadScene(int sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }

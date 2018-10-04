@@ -7,7 +7,7 @@ public class GameInfomation : MonoBehaviour {
     public static int catchStatus = 3;
     public static string Playername { get; set; }
     public static int Playerage { get; set; }
-
+    public static string scenePlay = "bt_Fruit";
     public static string Spawner;
     public enum statusGame
     {

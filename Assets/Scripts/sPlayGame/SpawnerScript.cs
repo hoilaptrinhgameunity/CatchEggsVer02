@@ -7,22 +7,30 @@ public class SpawnerScript : MonoBehaviour {
     //public static float spawnRate;
 
     private GameObject[] spawnerObj;
-    void Start()
+    private void Awake()
     {
-        spawnerObj = Resources.LoadAll<GameObject>("Prefabs/sPlayGame/Fruit");
+        if(GameInfomation.scenePlay == "bt_Fruit")
+        {
+            spawnerObj = Resources.LoadAll<GameObject>("Prefabs/sPlayGame/Fruit");
+        }
+        else if (GameInfomation.scenePlay == "bt_Alphabet")
+        {
+            spawnerObj = Resources.LoadAll<GameObject>("Prefabs/sPlayGame/Alphabet");
+        }
+
     }
     void Update()
     {
         if (GameInfomation.catchStatus == 3)
         {
-            spawnCath();         
+            spawnCath();
         }
     }
     void spawnCath()
     {
         int[] catchRandom = funCatchRandom();
-        GameInfomation.Spawner = spawnerObj[catchRandom[0]].GetComponent<BaseFruitClass>().fruitClassName;
-        
+        int randomcatch = Random.Range(0,3);
+        GameInfomation.Spawner = spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName;
         Vector3 spawnPos1 = transform.position + new Vector3(-1.6f, 0, 0);
         Vector3 spawnPos2 = transform.position + new Vector3(0, 0, 0);
         Vector3 spawnPos3 = transform.position + new Vector3(1.6f, 0, 0);
@@ -43,6 +51,7 @@ public class SpawnerScript : MonoBehaviour {
         Instantiate(spawnerObj[catchRandom[instanRandom[1]]], spawnPos2, spawnerObj[catchRandom[instanRandom[1]]].transform.rotation);
         Instantiate(spawnerObj[catchRandom[instanRandom[2]]], spawnPos3, spawnerObj[catchRandom[instanRandom[2]]].transform.rotation);
         GameInfomation.catchStatus = 0;
+        Debug.Log(spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName);
     }
     int[] funCatchRandom()
     {
@@ -60,5 +69,4 @@ public class SpawnerScript : MonoBehaviour {
         }
         return catchRandom;
     }
-
 }
