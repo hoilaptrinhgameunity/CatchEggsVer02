@@ -28,23 +28,24 @@ public class SpawnerScript : MonoBehaviour {
     }
     void spawnCath()
     {
+        System.Random randomNum = new System.Random();
         int[] catchRandom = funCatchRandom();
-        int randomcatch = Random.Range(0,3);
+        int randomcatch = randomNum.Next(0,3);
         GameInfomation.Spawner = spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName;
         Vector3 spawnPos1 = transform.position + new Vector3(-1.6f, 0, 0);
         Vector3 spawnPos2 = transform.position + new Vector3(0, 0, 0);
         Vector3 spawnPos3 = transform.position + new Vector3(1.6f, 0, 0);
 
         int[] instanRandom =new int[3];
-        instanRandom[0] = Random.Range(0, 3);
+        instanRandom[0] = randomNum.Next(0, 3);
 
         while (instanRandom[1] == instanRandom[0])
         {
-            instanRandom[1] = Random.Range(0, 3);
+            instanRandom[1] = randomNum.Next(0, 3);
         }
         while (instanRandom[2] == instanRandom[0] || instanRandom[2] == instanRandom[1])
         {
-            instanRandom[2] = Random.Range(0, 3);
+            instanRandom[2] = randomNum.Next(0, 3);
         }
         
         Instantiate(spawnerObj[catchRandom[instanRandom[0]]], spawnPos1, spawnerObj[catchRandom[instanRandom[0]]].transform.rotation);
@@ -56,16 +57,18 @@ public class SpawnerScript : MonoBehaviour {
     int[] funCatchRandom()
     {
         int[] catchRandom = new int[3];
-        catchRandom[0] = Random.Range(0, spawnerObj.Length); ;
-        catchRandom[1] = Random.Range(0, spawnerObj.Length); ;
-        catchRandom[2] = Random.Range(0, spawnerObj.Length); ;
+        System.Random randomNum = new System.Random();
+
+        catchRandom[0] = randomNum.Next(0, spawnerObj.Length); ;
+        catchRandom[1] = randomNum.Next(0, spawnerObj.Length); ;
+        catchRandom[2] = randomNum.Next(0, spawnerObj.Length); ;
         while (catchRandom[1] == catchRandom[0])
         {
-            catchRandom[1] = Random.Range(0, spawnerObj.Length);
+            catchRandom[1] = randomNum.Next(0, spawnerObj.Length);
         }
         while (catchRandom[2] == catchRandom[0] || catchRandom[2] == catchRandom[1])
         {
-            catchRandom[2] = Random.Range(0, spawnerObj.Length);
+            catchRandom[2] = randomNum.Next(0, spawnerObj.Length);
         }
         return catchRandom;
     }
