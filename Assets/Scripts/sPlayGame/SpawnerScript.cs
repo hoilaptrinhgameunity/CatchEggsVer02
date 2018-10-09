@@ -15,7 +15,7 @@ public class SpawnerScript : MonoBehaviour {
         }
         else if (GameInfomation.scenePlay == "bt_Alphabet")
         {
-            spawnerObj = Resources.LoadAll<GameObject>("Prefabs/sPlayGame/Alphabet");
+            spawnerObj = Resources.LoadAll<GameObject>("Prefabs/sPlayGame/Letters");
         }
 
     }
