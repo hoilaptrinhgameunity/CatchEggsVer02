@@ -16,17 +16,35 @@ public class BucketCollisder : MonoBehaviour {
     
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<BaseFruitClass>().fruitClassName == GameInfomation.Spawner)
+        if (GameInfomation.scenePlay == "bt_Fruit")
         {
-            Debug.Log("Chuc mung: Diem + 1");
-            Destroy(other.gameObject);
-            GameInfomation.catchStatus++;
+            if (other.GetComponent<BaseFruitClass>().fruitClassName == GameInfomation.Spawner)
+            {
+                Debug.Log("Chuc mung: Diem + 1");
+                Destroy(other.gameObject);
+                GameInfomation.catchStatus++;
+            }
+            else
+            {
+                Debug.Log("Chia buon: Diem - 1");
+                Destroy(other.gameObject);
+                GameInfomation.catchStatus++;
+            }
         }
-        else
+        else if (GameInfomation.scenePlay == "bt_Alphabet")
         {
-            Debug.Log("Chia buon: Diem - 1");
-            Destroy(other.gameObject);
-            GameInfomation.catchStatus++;
+            if (other.GetComponent<ManagerLetters>().LettersClassName == GameInfomation.Spawner)
+            {
+                Debug.Log("Chuc mung: Diem + 1");
+                Destroy(other.gameObject);
+                GameInfomation.catchStatus++;
+            }
+            else
+            {
+                Debug.Log("Chia buon: Diem - 1");
+                Destroy(other.gameObject);
+                GameInfomation.catchStatus++;
+            }
         }
     }
 }

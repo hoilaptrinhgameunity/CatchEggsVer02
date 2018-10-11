@@ -31,7 +31,15 @@ public class SpawnerScript : MonoBehaviour {
         System.Random randomNum = new System.Random();
         int[] catchRandom = funCatchRandom();
         int randomcatch = randomNum.Next(0,3);
-        GameInfomation.Spawner = spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName;
+        if (GameInfomation.scenePlay == "bt_Fruit")
+        {
+            GameInfomation.Spawner = spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName;
+        }
+        else if (GameInfomation.scenePlay == "bt_Alphabet")
+        {
+            GameInfomation.Spawner = "Letter_" + spawnerObj[catchRandom[randomcatch]].name;
+            Debug.Log("Test: " + GameInfomation.Spawner);
+        }
         Vector3 spawnPos1 = transform.position + new Vector3(-1.6f, 0, 0);
         Vector3 spawnPos2 = transform.position + new Vector3(0, 0, 0);
         Vector3 spawnPos3 = transform.position + new Vector3(1.6f, 0, 0);
@@ -47,12 +55,12 @@ public class SpawnerScript : MonoBehaviour {
         {
             instanRandom[2] = randomNum.Next(0, 3);
         }
-        
-        Instantiate(spawnerObj[catchRandom[instanRandom[0]]], spawnPos1, spawnerObj[catchRandom[instanRandom[0]]].transform.rotation);
-        Instantiate(spawnerObj[catchRandom[instanRandom[1]]], spawnPos2, spawnerObj[catchRandom[instanRandom[1]]].transform.rotation);
-        Instantiate(spawnerObj[catchRandom[instanRandom[2]]], spawnPos3, spawnerObj[catchRandom[instanRandom[2]]].transform.rotation);
+
+        Instantiate(spawnerObj[catchRandom[instanRandom[0]]], spawnPos1, Quaternion.Euler(new Vector3 (180, 0, 0)));
+        Instantiate(spawnerObj[catchRandom[instanRandom[1]]], spawnPos2, Quaternion.Euler(new Vector3 (180, 0, 0)));
+        Instantiate(spawnerObj[catchRandom[instanRandom[2]]], spawnPos3, Quaternion.Euler(new Vector3 (180, 0, 0)));
+
         GameInfomation.catchStatus = 0;
-        Debug.Log(spawnerObj[catchRandom[randomcatch]].GetComponent<BaseFruitClass>().fruitClassName);
     }
     int[] funCatchRandom()
     {
